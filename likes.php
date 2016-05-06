@@ -35,11 +35,20 @@
             }
             
         }
-           
-        
         
     
     }
+    
+    function cmp($a, $b)
+    {
+        if ($a["count"] == $b["count"]) {
+            return 0;
+        }
+        return ($a > $b) ? +1 : -1;
+    }
+   
+    
+    usort($data, "cmp");
 ?>
 <head> <meta charset="utf-8" />
     
@@ -105,9 +114,6 @@
     </div><!-- end container -->
     <!--<pre>
     <?php
-    
-   
-    
     
      /*print_r($data);*/
     ?>
